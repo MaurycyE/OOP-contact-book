@@ -17,12 +17,21 @@ class KsiazkaAdresowa
     int idOstatniegoAdresata;
     int idUsunietegoAdresata;
 
+
+       Uzytkownik podajDaneNowegoUzytkownika();
+       int pobierzIdNowegoUzytkownika();
+       bool czyIstniejeLogin(string login);
+
         public:
         /** Default constructor */
         KsiazkaAdresowa();
         /** Default destructor */
         ~KsiazkaAdresowa();
-        void rejestracjaUzytkownika (vector <Uzytkownik> &uzytkownicy);
+        void rejestracjaUzytkownika ();
+        void wypiszWszystkichUzytkownikow();
+
+
+
 
 
 
