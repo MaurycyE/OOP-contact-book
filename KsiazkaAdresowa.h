@@ -12,15 +12,20 @@ class KsiazkaAdresowa
 
     //protected:
 
-        vector <Uzytkownik> uzytkownicy;
-        int idZalogowanegoUzytkownika;
+    vector <Uzytkownik> uzytkownicy;
+    int idZalogowanegoUzytkownika;
     int idOstatniegoAdresata;
     int idUsunietegoAdresata;
+    string nazwaPlikuZUzytkownikami;
 
 
        Uzytkownik podajDaneNowegoUzytkownika();
        int pobierzIdNowegoUzytkownika();
        bool czyIstniejeLogin(string login);
+       void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
+       string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+       string konwerjsaIntNaString(int liczba);
+       bool czyPlikJestPusty(fstream &plikTekstowy);
 
         public:
         /** Default constructor */
