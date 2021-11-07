@@ -16,7 +16,7 @@ class UzytkownikMenager
         ~UzytkownikMenager();
         void rejestracjaUzytkownika();
         void wypiszWszystkichUzytkownikow();
-
+        void wczytajUzytkownikowZPliku();
 
     //protected:
 
@@ -28,6 +28,7 @@ class UzytkownikMenager
        int pobierzIdNowegoUzytkownika();
        bool czyIstniejeLogin(string login);
         PlikZuzytkownikami plikZuzytkownikami;
+
 
 
 };

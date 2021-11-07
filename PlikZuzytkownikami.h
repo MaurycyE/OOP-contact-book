@@ -16,13 +16,17 @@ public:
     ~PlikZuzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     //protected:
+    vector<Uzytkownik> wczytajUzytkownikowZPliku();
+
 
 private:
     string nazwaPlikuZUzytkownikami;
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     fstream plikTekstowy;
+    //vector <Uzytkownik> uzytkownicy;
 
     bool czyPlikJestPusty();
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 };
 
