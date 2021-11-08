@@ -4,10 +4,6 @@
 
 using namespace std;
 
-PlikZuzytkownikami::PlikZuzytkownikami() {
-    //ctor
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-}
 
 PlikZuzytkownikami::~PlikZuzytkownikami() {
     //dtor
@@ -15,6 +11,7 @@ PlikZuzytkownikami::~PlikZuzytkownikami() {
 
 void PlikZuzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 
+    fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
@@ -32,6 +29,7 @@ void PlikZuzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 }
 
 bool PlikZuzytkownikami::czyPlikJestPusty() {
+    fstream plikTekstowy;
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -52,6 +50,7 @@ string PlikZuzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowym
 
 vector<Uzytkownik> PlikZuzytkownikami::wczytajUzytkownikowZPliku() {
 
+    fstream plikTekstowy;
   Uzytkownik uzytkownik;
   vector<Uzytkownik>uzytkownicy;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
