@@ -3,10 +3,6 @@
 
 using namespace std;
 
-UzytkownikMenager::UzytkownikMenager() {
-    //ctor
-}
-
 UzytkownikMenager::~UzytkownikMenager() {
     //dtor
 }

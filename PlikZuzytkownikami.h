@@ -11,7 +11,7 @@ using namespace std;
 class PlikZuzytkownikami {
 public:
     /** Default constructor */
-    PlikZuzytkownikami();
+    PlikZuzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI): nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI){};
     /** Default destructor */
     ~PlikZuzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
@@ -20,9 +20,9 @@ public:
 
 
 private:
-    string nazwaPlikuZUzytkownikami;
+    const string nazwaPlikuZUzytkownikami;
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
-    fstream plikTekstowy;
+    //fstream plikTekstowy;
     //vector <Uzytkownik> uzytkownicy;
 
     bool czyPlikJestPusty();

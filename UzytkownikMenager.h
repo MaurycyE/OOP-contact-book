@@ -11,7 +11,7 @@ class UzytkownikMenager
 {
     public:
         /** Default constructor */
-        UzytkownikMenager();
+        UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZuzytkownikami(nazwaPlikuZUzytkownikami) {};
         /** Default destructor */
         ~UzytkownikMenager();
         void rejestracjaUzytkownika();
