@@ -17,6 +17,7 @@ class UzytkownikMenager
         void rejestracjaUzytkownika();
         void wypiszWszystkichUzytkownikow();
         void wczytajUzytkownikowZPliku();
+        int logowanieUzytkownika();
 
     //protected:
 
@@ -32,5 +33,7 @@ class UzytkownikMenager
 
 
 };
+
+
 
 #endif // UZYTKOWNIKMENAGER_H

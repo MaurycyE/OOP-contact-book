@@ -4,13 +4,11 @@
 
 using namespace std;
 
-MetodyPomocnicze::MetodyPomocnicze()
-{
+MetodyPomocnicze::MetodyPomocnicze() {
     //ctor
 }
 
-MetodyPomocnicze::~MetodyPomocnicze()
-{
+MetodyPomocnicze::~MetodyPomocnicze() {
     //dtor
 }
 
@@ -19,4 +17,10 @@ string MetodyPomocnicze::konwerjsaIntNaString(int liczba) {
     ss << liczba;
     string str = ss.str();
     return str;
+}
+
+string MetodyPomocnicze::wczytajLinie() {
+    string wejscie = "";
+    getline(cin, wejscie);
+    return wejscie;
 }

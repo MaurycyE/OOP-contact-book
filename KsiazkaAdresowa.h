@@ -15,6 +15,7 @@ public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami):uzytkownikMenager(nazwaPlikuZUzytkownikami){
 
     uzytkownikMenager.wczytajUzytkownikowZPliku();
+    uzytkownikMenager.logowanieUzytkownika();
 
     };
 
