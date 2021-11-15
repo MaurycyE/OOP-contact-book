@@ -1,6 +1,7 @@
 #ifndef METODYPOMOCNICZE_H
 #define METODYPOMOCNICZE_H
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -12,6 +13,8 @@ public:
     ~MetodyPomocnicze();
     static string konwerjsaIntNaString(int liczba);
     static string wczytajLinie();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    static bool czyPlikJestPusty(fstream &plikTekstowy);
     //protected:
 
 

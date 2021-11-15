@@ -17,6 +17,7 @@ public:
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     //protected:
     vector<Uzytkownik> wczytajUzytkownikowZPliku();
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
 
 
 private:
@@ -25,7 +26,7 @@ private:
     //fstream plikTekstowy;
     //vector <Uzytkownik> uzytkownicy;
 
-    bool czyPlikJestPusty();
+   // bool czyPlikJestPusty();
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 };

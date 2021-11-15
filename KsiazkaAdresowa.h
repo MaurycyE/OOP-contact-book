@@ -17,6 +17,8 @@ public:
     uzytkownikMenager.wczytajUzytkownikowZPliku();
     uzytkownikMenager.logowanieUzytkownika();
 
+    //uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika(uzytkownikMenager.logowanieUzytkownika());
+
     };
 
 };

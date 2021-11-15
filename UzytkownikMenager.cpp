@@ -3,6 +3,9 @@
 
 using namespace std;
 
+
+
+
 UzytkownikMenager::~UzytkownikMenager() {
     //dtor
 }
@@ -117,5 +120,28 @@ int UzytkownikMenager::logowanieUzytkownika() {
     system("pause");
     return 0;
 }
+
+void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika) {
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = MetodyPomocnicze::wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++) {
+        if (itr -> Uzytkownik::pobierzId() == idZalogowanegoUzytkownika) {
+            itr -> Uzytkownik::ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    plikZuzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+//int UzytkownikMenager::wylogowanieUzytkownika(int idZalogowanegoUzytkownika, vector <Adresat> adresaci) {
+//
+//    idZalogowanegoUzytkownika = 0;
+//    adresaci.clear();
+//    return idZalogowanegoUzytkownika;
+//
+//}
 
 

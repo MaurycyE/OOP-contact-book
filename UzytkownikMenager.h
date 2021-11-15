@@ -12,13 +12,15 @@ class UzytkownikMenager
     public:
         /** Default constructor */
         UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZuzytkownikami(nazwaPlikuZUzytkownikami) {};
+        //UzytkownikMenager();
         /** Default destructor */
         ~UzytkownikMenager();
         void rejestracjaUzytkownika();
         void wypiszWszystkichUzytkownikow();
         void wczytajUzytkownikowZPliku();
         int logowanieUzytkownika();
-
+        void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
+      //  int wylogowanieUzytkownika(int idZalogowanegoUzytkownika, vector <Adresat> adresaci);
     //protected:
 
     private:
