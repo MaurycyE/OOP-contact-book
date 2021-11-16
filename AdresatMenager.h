@@ -2,6 +2,7 @@
 #define ADRESATMENAGER_H
 #include <iostream>
 #include <vector>
+#include <windows.h>
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 #include "PlikZadresatami.h"
@@ -15,6 +16,7 @@ class AdresatMenager
         /** Default constructor */
         AdresatMenager();
         int dodajAdresata( int idOstatniegoAdresata);
+        void wyswietlWszystkichAdresatow();
 
     private:
         Adresat adresat;
@@ -22,6 +24,7 @@ class AdresatMenager
         int idZalogowanegoUzytkownika;
         Adresat podajDaneNowegoAdresata(int idOstatniegoAdresata);
         PlikZadresatami plikZadresatami;
+        void wyswietlDaneAdresata(Adresat adresat);
 };
 
 #endif // ADRESATMENAGER_H

@@ -20,6 +20,14 @@ string MetodyPomocnicze::konwerjsaIntNaString(int liczba) {
     return str;
 }
 
+int MetodyPomocnicze::konwersjaStringNaInt(string liczba) {
+    int liczbaInt;
+    istringstream iss(liczba);
+    iss >> liczbaInt;
+
+    return liczbaInt;
+}
+
 string MetodyPomocnicze::wczytajLinie() {
     string wejscie = "";
     getline(cin, wejscie);
