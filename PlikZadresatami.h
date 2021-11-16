@@ -13,14 +13,14 @@ class PlikZadresatami
 {
     public:
         /** Default constructor */
-        PlikZadresatami();
+        PlikZadresatami(string NAZWAPLIKUZADRESATAMI): nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
         void dopiszAdresataDoPliku(Adresat adresat);
-        int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+        int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika, vector <Adresat> &adresaci);
 
 
     private:
         Adresat adresat;
-        string nazwaPlikuZAdresatami;
+        const string nazwaPlikuZAdresatami;
         string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
         Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
         int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);

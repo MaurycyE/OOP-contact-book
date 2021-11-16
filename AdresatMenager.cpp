@@ -3,16 +3,30 @@
 
 using namespace std;
 
-AdresatMenager::AdresatMenager() {
-    //ctor
+//AdresatMenager::AdresatMenager() {
+//    //ctor
+//}
+
+
+void AdresatMenager::ustawIdZalogowanegoUzytkownika(int PobraneIdZalogowanegoUzytkownika){
+idZalogowanegoUzytkownika=PobraneIdZalogowanegoUzytkownika;
+
 }
 
-int AdresatMenager::dodajAdresata(int idOstatniegoAdresata) {
-    // Adresat adresat;
 
+
+void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownikaZPliku() {
+
+ idOstatniegoAdresata = plikZadresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika, adresaci);
+
+}
+
+int AdresatMenager::dodajAdresata() {
+    // Adresat adresat;
+    //UzytkownikMenager uzytkownikMeneger;
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = AdresatMenager::podajDaneNowegoAdresata(idOstatniegoAdresata);
+    adresat = AdresatMenager::podajDaneNowegoAdresata( idOstatniegoAdresata);
 
     adresaci.push_back(adresat);
     plikZadresatami.dopiszAdresataDoPliku(adresat);
@@ -20,7 +34,7 @@ int AdresatMenager::dodajAdresata(int idOstatniegoAdresata) {
     return ++idOstatniegoAdresata;
 }
 
-Adresat AdresatMenager::podajDaneNowegoAdresata(int idOstatniegoAdresata) {
+Adresat AdresatMenager::podajDaneNowegoAdresata( int idOstatniegoAdresata) {
     //Adresat adresat;
 
     adresat.ustawId(++idOstatniegoAdresata);

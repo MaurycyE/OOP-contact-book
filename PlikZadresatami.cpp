@@ -3,9 +3,9 @@
 
 using namespace std;
 
-PlikZadresatami::PlikZadresatami() {
-    //ctor
-}
+//PlikZadresatami::PlikZadresatami() {
+//    //ctor
+//}
 
 void PlikZadresatami::dopiszAdresataDoPliku(Adresat adresat) {
     string liniaZDanymiAdresata = "";
@@ -42,10 +42,9 @@ string PlikZadresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
     return liniaZDanymiAdresata;
 }
 
-int PlikZadresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika) {
+int PlikZadresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika, vector <Adresat> &adresaci) {
 
-    vector <Adresat> adresaci;
-    //Adresat adresat;
+    //vector <Adresat> adresaci;
     int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";

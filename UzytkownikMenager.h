@@ -20,6 +20,7 @@ class UzytkownikMenager
         void wczytajUzytkownikowZPliku();
         int logowanieUzytkownika();
         void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
+        int pobierzIdZalogowanegoUzytkownika();
       //  int wylogowanieUzytkownika(int idZalogowanegoUzytkownika, vector <Adresat> adresaci);
     //protected:
 
