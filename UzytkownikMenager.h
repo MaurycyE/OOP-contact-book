@@ -4,26 +4,27 @@
 #include <vector>
 #include "Uzytkownik.h"
 #include "PlikZuzytkownikami.h"
+#include "AdresatMenager.h"
 
 using namespace std;
 
 class UzytkownikMenager
 {
     public:
-        /** Default constructor */
+
         UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZuzytkownikami(nazwaPlikuZUzytkownikami) {};
-        /** Default destructor */
-        ~UzytkownikMenager();
         void rejestracjaUzytkownika();
         void wypiszWszystkichUzytkownikow();
         void wczytajUzytkownikowZPliku();
-
-    //protected:
+        int logowanieUzytkownika();
+        void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
+        int pobierzIdZalogowanegoUzytkownika();
+        void wylogujUzytkownika ();
 
     private:
+
         int idZalogowanegoUzytkownika;
         vector <Uzytkownik> uzytkownicy;
-
         Uzytkownik podajDaneNowegoUzytkownika();
        int pobierzIdNowegoUzytkownika();
        bool czyIstniejeLogin(string login);
@@ -32,5 +33,7 @@ class UzytkownikMenager
 
 
 };
+
+
 
 #endif // UZYTKOWNIKMENAGER_H
