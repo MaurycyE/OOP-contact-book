@@ -26,9 +26,6 @@ class Adresat
         void ustawAdres(string nowyAdres);
 
 
-
-    //protected:
-
     private:
         int id;
         int idUzytkownika;

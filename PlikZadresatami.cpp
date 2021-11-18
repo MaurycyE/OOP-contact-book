@@ -1,16 +1,12 @@
 #include "PlikZadresatami.h"
-//#include <iostream>
 
 using namespace std;
 
-//PlikZadresatami::PlikZadresatami() {
-//    //ctor
-//}
-
 void PlikZadresatami::dopiszAdresataDoPliku(Adresat adresat) {
+
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
-    //nazwaPlikuZAdresatami="adresaci.txt";
+
     plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true) {
@@ -44,7 +40,6 @@ string PlikZadresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
 
 int PlikZadresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika, vector <Adresat> &adresaci) {
 
-    //vector <Adresat> adresaci;
     int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
@@ -73,7 +68,6 @@ int PlikZadresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogow
 
 Adresat PlikZadresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami) {
 
-    // Adresat adresat;
     string pojedynczaDanaAdresata = "";
     int numerPojedynczejDanejAdresata = 1;
 
@@ -112,6 +106,7 @@ Adresat PlikZadresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
 }
 
 int PlikZadresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami) {
+
     int pozycjaRozpoczeciaIdUzytkownika = daneJednegoAdresataOddzielonePionowymiKreskami.find_first_of('|') + 1;
     int idUzytkownika = MetodyPomocnicze::konwersjaStringNaInt(pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdUzytkownika));
 
@@ -119,12 +114,14 @@ int PlikZadresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(st
 }
 
 int PlikZadresatami::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami) {
+
     int pozycjaRozpoczeciaIdAdresata = 0;
     int idAdresata = MetodyPomocnicze::konwersjaStringNaInt(pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
     return idAdresata;
 }
 
 string PlikZadresatami::pobierzLiczbe(string tekst, int pozycjaZnaku) {
+
     string liczba = "";
     while(isdigit(tekst[pozycjaZnaku]) == true) {
         liczba += tekst[pozycjaZnaku];

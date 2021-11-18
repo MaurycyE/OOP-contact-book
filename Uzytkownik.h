@@ -25,8 +25,6 @@ class Uzytkownik
         string pobierzLogin();
         string pobierzHaslo();
 
-    //protected:
-
     //private:
 };
 

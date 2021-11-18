@@ -1,13 +1,7 @@
 #include "PlikZuzytkownikami.h"
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
-
-PlikZuzytkownikami::~PlikZuzytkownikami() {
-    //dtor
-}
 
 void PlikZuzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 
@@ -38,9 +32,8 @@ void PlikZuzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 //}
 
 string PlikZuzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) {
+
     string liniaZDanymiUzytkownika = "";
-
-
     liniaZDanymiUzytkownika += MetodyPomocnicze::konwerjsaIntNaString(uzytkownik.pobierzId())+ '|';
     liniaZDanymiUzytkownika += uzytkownik.pobierzLogin() + '|';
     liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
@@ -66,8 +59,6 @@ vector<Uzytkownik> PlikZuzytkownikami::wczytajUzytkownikowZPliku() {
     }
     plikTekstowy.close();
 
-
-
     return uzytkownicy;
 }
 
@@ -83,13 +74,13 @@ Uzytkownik PlikZuzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
         } else {
             switch(numerPojedynczejDanejUzytkownika) {
             case 1:
-                uzytkownik.ustawId(atoi(pojedynczaDanaUzytkownika.c_str()));   //atoi(pojedynczaDanaUzytkownika.c_str());
+                uzytkownik.ustawId(atoi(pojedynczaDanaUzytkownika.c_str()));
                 break;
             case 2:
-                uzytkownik.ustawLogin(pojedynczaDanaUzytkownika); //= pojedynczaDanaUzytkownika;
+                uzytkownik.ustawLogin(pojedynczaDanaUzytkownika);
                 break;
             case 3:
-                uzytkownik.ustawHaslo(pojedynczaDanaUzytkownika); //= pojedynczaDanaUzytkownika;
+                uzytkownik.ustawHaslo(pojedynczaDanaUzytkownika);
                 break;
             }
             pojedynczaDanaUzytkownika = "";
@@ -101,6 +92,7 @@ Uzytkownik PlikZuzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
 }
 
 void PlikZuzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy) {
+
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
     vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
@@ -123,5 +115,3 @@ void PlikZuzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik>
     }
     plikTekstowy.close();
 }
-
-

@@ -19,10 +19,13 @@ public:
     uzytkownikMenager.wczytajUzytkownikowZPliku();
     uzytkownikMenager.logowanieUzytkownika();
     adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-    adresatMeneger.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-    //adresatMeneger.dodajAdresata();
-
+    adresatMeneger.dodajAdresata();
     adresatMeneger.wyswietlWszystkichAdresatow();
+
+    uzytkownikMenager.wylogujUzytkownika();
+    adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+    adresatMeneger.wyswietlWszystkichAdresatow();
+
     //uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika(uzytkownikMenager.logowanieUzytkownika());
 
     };

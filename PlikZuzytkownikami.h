@@ -9,25 +9,17 @@
 using namespace std;
 
 class PlikZuzytkownikami {
+
 public:
-    /** Default constructor */
+
     PlikZuzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI): nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI){};
-    /** Default destructor */
-    ~PlikZuzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
-    //protected:
     vector<Uzytkownik> wczytajUzytkownikowZPliku();
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
-
-
 
 private:
     const string nazwaPlikuZUzytkownikami;
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
-    //fstream plikTekstowy;
-    //vector <Uzytkownik> uzytkownicy;
-
-   // bool czyPlikJestPusty();
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 };

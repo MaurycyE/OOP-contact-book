@@ -14,7 +14,7 @@ using namespace std;
 class AdresatMenager
 {
     public:
-        /** Default constructor */
+        //AdresatMenager() {};
         AdresatMenager(string nazwaPlikuZAdresatami): plikZadresatami(nazwaPlikuZAdresatami) {};
         int dodajAdresata();
         void wyswietlWszystkichAdresatow();
@@ -29,6 +29,7 @@ class AdresatMenager
         Adresat podajDaneNowegoAdresata(int idOstatniegoAdresata);
         PlikZadresatami plikZadresatami;
         void wyswietlDaneAdresata(Adresat adresat);
+
 };
 
 #endif // ADRESATMENAGER_H

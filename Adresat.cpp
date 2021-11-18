@@ -1,6 +1,4 @@
 #include "Adresat.h"
-//#include <iostream>
-
 
 using namespace std;
 

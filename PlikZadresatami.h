@@ -12,7 +12,7 @@ using namespace std;
 class PlikZadresatami
 {
     public:
-        /** Default constructor */
+        //PlikZadresatami() {};
         PlikZadresatami(string NAZWAPLIKUZADRESATAMI): nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
         void dopiszAdresataDoPliku(Adresat adresat);
         int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika, vector <Adresat> &adresaci);
