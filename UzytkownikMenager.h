@@ -8,27 +8,30 @@
 
 using namespace std;
 
-class UzytkownikMenager
-{
-    public:
+class UzytkownikMenager {
+public:
 
-        UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZuzytkownikami(nazwaPlikuZUzytkownikami) {};
-        void rejestracjaUzytkownika();
-        void wypiszWszystkichUzytkownikow();
-        void wczytajUzytkownikowZPliku();
-        int logowanieUzytkownika();
-        void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
-        int pobierzIdZalogowanegoUzytkownika();
-        void wylogujUzytkownika ();
+    UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZuzytkownikami(nazwaPlikuZUzytkownikami) {
+        idZalogowanegoUzytkownika = 0;
+        uzytkownicy=plikZuzytkownikami.wczytajUzytkownikowZPliku();
+    };
+    void rejestracjaUzytkownika();
+    void wypiszWszystkichUzytkownikow();
+    int logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    void wylogujUzytkownika ();
+    bool czyUzytkownikJestZalogowany();
 
-    private:
+private:
 
-        int idZalogowanegoUzytkownika;
-        vector <Uzytkownik> uzytkownicy;
-        Uzytkownik podajDaneNowegoUzytkownika();
-       int pobierzIdNowegoUzytkownika();
-       bool czyIstniejeLogin(string login);
-        PlikZuzytkownikami plikZuzytkownikami;
+    int idZalogowanegoUzytkownika;
+    vector <Uzytkownik> uzytkownicy;
+    Uzytkownik podajDaneNowegoUzytkownika();
+    int pobierzIdNowegoUzytkownika();
+    bool czyIstniejeLogin(string login);
+
+    PlikZuzytkownikami plikZuzytkownikami;
 
 
 

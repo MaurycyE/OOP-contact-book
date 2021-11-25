@@ -5,25 +5,34 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>370</y>
-      <w>330</w>
-      <h>160</h>
+      <y>480</y>
+      <w>360</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 - UzytkownikMenager: uzytkownikMenager
++ NAZWA_PLIKU_Z_ADRESATAMI: string
 --
 KsiazkaAdresowa()
+~KsiazkaAdresowa()
 + rejestracjaUzytkownika(): void
 + wypiszWszystkichUzytkownikow(): void
-</panel_attributes>
++ logowanieUzytkownika(): int
++ wyswietlWszystkichAdresatow(): void
++ wylogujUzytkownika(): void
++ wybierzOpcjeZMenuGlownego(): char
++ wybierzOpcjeZMenuUzytkownika(): char
++ zmianaHaslaZalogowanegoUzytkownika(): void
++ dodajAdresata(): void
++ czyUzytkownikJestZalogowany(): bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>250</y>
+      <x>180</x>
+      <y>20</y>
       <w>170</w>
       <h>110</h>
     </coordinates>
@@ -37,25 +46,26 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>80</y>
+      <x>0</x>
+      <y>190</y>
       <w>360</w>
-      <h>270</h>
+      <h>280</h>
     </coordinates>
     <panel_attributes>UzytkownikMenager
 --
-- idZalogowanegoUzytkownika: integer
+- idZalogowanegoUzytkownika: int
 - uzytkownicy: vector &lt;Uzytkownik&gt;
 --
 + KsiazkaAdresowa()
 + rejestracjaUzytkownika (): void
-+ logowanieUzytkownika (): integer
++ logowanieUzytkownika (): int
 + wypiszWszystkichUzytkownikow(): void
 + wczytajUzytkownikowZpliku(): void
 + logowanieUzytkownika(): int
 + zamianaHaslaZalogowanegoUzytkownika(): void
 + pobierzIdZalogowanegoUzytkownika(): int
 + wylogujUzytkownika(): void
++ czyUzytkownikJestZalogowany(): bool
 - podajDaneNowegoUzytkownika(): Uzytkownik
 - pobierzIdNowegoUzytkownika(): int
 - czyIstniejeLogin():bool
@@ -66,14 +76,14 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>400</y>
+      <x>370</x>
+      <y>390</y>
       <w>370</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>PlikZuzytkownikami
 --
-- nazwaPlikuZUzytkownikami: string
+- NAZWA_PLIKU_Z_UZYTKOWNIKAMI: string
 --
 + PlikZuzytkownikami()
 + dopiszUzytkownikaDoPliku(): void
@@ -87,10 +97,10 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
-      <y>40</y>
-      <w>430</w>
-      <h>120</h>
+      <x>360</x>
+      <y>20</y>
+      <w>440</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
@@ -98,14 +108,15 @@ KsiazkaAdresowa()
 + konwersjaStringNaInt(): int
 + wczytajLinie(): string
 + zamienPierwszaLitereNaDuzaAPozostaleNaMale(): string
-+ czyPlikJestPusty(): bool</panel_attributes>
++ czyPlikJestPusty(): bool
++ wczytajZnak(): char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>550</y>
+      <x>10</x>
+      <y>20</y>
       <w>160</w>
       <h>150</h>
     </coordinates>
@@ -123,18 +134,20 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>180</y>
+      <x>380</x>
+      <y>160</y>
       <w>520</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>PlikZadresatami
 --
-- nazwaPlikuZAdresatami: string
+- idOstatniegoAdresata: int
+- NAZWA_PLIKU_Z_ADRESATAMI: string
 --
 + PlikZadresatami()
-+ dopiszAdresataDoPliku (): void
-+ wczytajAdresatowZalogowanegoUzytkownikaZPliku(): int
++ dopiszAdresataDoPliku (): bool
++ wczytajAdresatowZalogowanegoUzytkownikaZPliku(): Adresat
++ pobierzIdOstatniegoAdresata(): int
 - pobierzDaneAdresata(): Adresat
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(): int
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(): int
@@ -145,22 +158,19 @@ KsiazkaAdresowa()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
-      <y>610</y>
+      <x>420</x>
+      <y>600</y>
       <w>370</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>AdresatMenager
 --
 - adresaci: vector&lt;Adresat&gt;
-- idZalogowanegoUzytkownika: int
-- idOstatniegoAdresata: int
+- ID_ZALOGOWANEGO_UZYTKOWNIKA: int
 --
 + AdresatMeneger()
 + dodajAdresata(): int
 + wyswietlWszystkichAdresatow(): void
-+ wczytajAdresatowZalogowanegoUzytkownikaZPliku(): void
-+ ustawIdZalogowanegoUzytkownika(): void
 - podajDaneNowegoAdresata(): Adresat
 - wyswietlDaneAdresata(): void
 </panel_attributes>

@@ -9,26 +9,32 @@ using namespace std;
 class KsiazkaAdresowa {
 
     UzytkownikMenager uzytkownikMenager;
-    AdresatMenager adresatMeneger;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    AdresatMenager *adresatMeneger;
 
 public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):uzytkownikMenager(nazwaPlikuZUzytkownikami), adresatMeneger(nazwaPlikuZAdresatami){
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami):uzytkownikMenager(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami){
 
-    uzytkownikMenager.wczytajUzytkownikowZPliku();
-    uzytkownikMenager.logowanieUzytkownika();
-    adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-    adresatMeneger.dodajAdresata();
-    adresatMeneger.wyswietlWszystkichAdresatow();
-
-    uzytkownikMenager.wylogujUzytkownika();
-    adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
-    adresatMeneger.wyswietlWszystkichAdresatow();
-
-    //uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika(uzytkownikMenager.logowanieUzytkownika());
-
+    adresatMeneger = NULL;
     };
+
+    ~KsiazkaAdresowa() {
+
+    delete adresatMeneger;
+    adresatMeneger = NULL;
+    };
+
+    int logowanieUzytkownika();
+    void wyswietlWszystkichAdresatow();
+    void wylogujUzytkownika();
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void dodajAdresata();
+    bool czyUzytkownikJestZalogowany();
+
 
 };
 

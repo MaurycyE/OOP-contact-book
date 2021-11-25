@@ -71,12 +71,6 @@ void UzytkownikMenager::wypiszWszystkichUzytkownikow() {
 
 }
 
-void UzytkownikMenager::wczytajUzytkownikowZPliku() {
-
-    uzytkownicy=plikZuzytkownikami.wczytajUzytkownikowZPliku();
-
-}
-
 int UzytkownikMenager::logowanieUzytkownika() {
 
     string login = "", haslo = "";
@@ -111,7 +105,7 @@ int UzytkownikMenager::logowanieUzytkownika() {
     return 0;
 }
 
-void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika) {
+void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika() {
 
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
@@ -128,14 +122,23 @@ void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzy
 }
 
 
-int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika(){
+int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika() {
 
-return idZalogowanegoUzytkownika;
+    return idZalogowanegoUzytkownika;
 
 }
 
 void UzytkownikMenager::wylogujUzytkownika () {
 
     idZalogowanegoUzytkownika=0;
+
+}
+
+bool UzytkownikMenager::czyUzytkownikJestZalogowany() {
+
+    if (idZalogowanegoUzytkownika>0)
+        return true;
+    else
+        return false;
 
 }

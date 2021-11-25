@@ -9,23 +9,27 @@
 using namespace std;
 
 
-class PlikZadresatami
-{
-    public:
-        //PlikZadresatami() {};
-        PlikZadresatami(string NAZWAPLIKUZADRESATAMI): nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
-        void dopiszAdresataDoPliku(Adresat adresat);
-        int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika, vector <Adresat> &adresaci);
+class PlikZadresatami {
 
+public:
 
-    private:
-        Adresat adresat;
-        const string nazwaPlikuZAdresatami;
-        string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-        Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-        int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-        int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-        string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    PlikZadresatami(string nazwaPlikuZAdresatami): NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
+        //idOstatniegoAdresata = 0;
+    };
+    bool dopiszAdresataDoPliku(Adresat adresat);
+    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    int pobierzIdOstatniegoAdresata();
+
+private:
+
+    int idOstatniegoAdresata;
+    Adresat adresat;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    string pobierzLiczbe(string tekst, int pozycjaZnaku);
 };
 
 #endif // PLIKZADRESATAMI_H
