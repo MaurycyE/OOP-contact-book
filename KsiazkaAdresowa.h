@@ -34,6 +34,9 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void dodajAdresata();
     bool czyUzytkownikJestZalogowany();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 
 
 };

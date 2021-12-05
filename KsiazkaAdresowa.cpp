@@ -98,3 +98,21 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany() {
 
     return uzytkownikMenager.czyUzytkownikJestZalogowany();
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu() {
+
+adresatMeneger->wyszukajAdresatowPoImieniu();
+
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku() {
+
+adresatMeneger->wyszukajAdresatowPoNazwisku();
+
+}
+
+void KsiazkaAdresowa::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata() {
+
+adresatMeneger->podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+
+}
