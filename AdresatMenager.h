@@ -23,6 +23,7 @@ public:
     void wyszukajAdresatowPoNazwisku();
     int usunAdresata();
     void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    void edytujAdresata();
 
 
 private:
@@ -34,6 +35,8 @@ private:
     void wyswietlDaneAdresata(Adresat adresat);
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    //void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 
 };
 

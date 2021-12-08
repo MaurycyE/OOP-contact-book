@@ -37,6 +37,7 @@ public:
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    void edytujAdresata();
 
 
 };

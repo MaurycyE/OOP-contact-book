@@ -116,3 +116,8 @@ void KsiazkaAdresowa::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata() {
 adresatMeneger->podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 
 }
+
+void KsiazkaAdresowa::edytujAdresata() {
+
+adresatMeneger->edytujAdresata();
+}
