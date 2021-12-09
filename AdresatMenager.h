@@ -19,6 +19,11 @@ public:
     };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    int usunAdresata();
+    void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    void edytujAdresata();
 
 
 private:
@@ -28,6 +33,9 @@ private:
     Adresat podajDaneNowegoAdresata();
     PlikZadresatami plikZadresatami;
     void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+    int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
 
 };
 

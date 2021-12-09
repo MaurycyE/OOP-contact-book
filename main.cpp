@@ -7,8 +7,6 @@ using namespace std;
 int main() {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
-    int idZalogowanegoUzytkownika = 0;
-
     char wybor;
 
     while (true) {
@@ -20,7 +18,7 @@ int main() {
                 ksiazkaAdresowa.rejestracjaUzytkownika();
                 break;
             case '2':
-                idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
+                ksiazkaAdresowa.logowanieUzytkownika();
                 break;
             case '9':
                 exit(0);
@@ -39,20 +37,19 @@ int main() {
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                //wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                //wyszukajAdresatowPoNazwisku(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '5':
-                //idUsunietegoAdresata = usunAdresata(adresaci);
-                //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                ksiazkaAdresowa.podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
                 break;
             case '6':
-                // edytujAdresata(adresaci);
+                 ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
@@ -63,8 +60,6 @@ int main() {
             }
         }
     }
-
-
 
     return 0;
 }

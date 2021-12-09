@@ -1,0 +1,5 @@
+1|4|Rachel|Vitharig|777888999|vitharig@gmail.com|zaginiona wyspa|
+3|5|Blue|Nieznane|777888999|kolorek@gmail.com|dietershafen|
+4|1|Nathaniel|Vitharig|777888999|vitharig@gmail.com|rezydencja Vitharig|
+5|1|Zoe|Withworth|777888999|withworth@gmail.com|zaginiona wyspa|
+6|5|Alice|Holiester|777888999|holiester@gmail.com|dietershafen|

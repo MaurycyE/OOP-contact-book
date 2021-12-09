@@ -30,10 +30,7 @@ private:
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-
     PlikZuzytkownikami plikZuzytkownikami;
-
-
 
 };
 
