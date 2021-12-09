@@ -26,7 +26,7 @@ public:
     adresatMeneger = NULL;
     };
 
-    int logowanieUzytkownika();
+    void logowanieUzytkownika();
     void wyswietlWszystkichAdresatow();
     void wylogujUzytkownika();
     char wybierzOpcjeZMenuGlownego();
@@ -38,7 +38,6 @@ public:
     void wyszukajAdresatowPoNazwisku();
     void podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
     void edytujAdresata();
-
 
 };
 

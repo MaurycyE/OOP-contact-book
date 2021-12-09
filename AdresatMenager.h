@@ -36,7 +36,6 @@ private:
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     int podajIdWybranegoAdresata();
     char wybierzOpcjeZMenuEdycja();
-    //void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 
 };
 

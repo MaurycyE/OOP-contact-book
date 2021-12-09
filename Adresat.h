@@ -8,7 +8,7 @@ using namespace std;
 class Adresat
 {
     public:
-        /** Default constructor */
+
         Adresat();
         int pobierzId();
         int pobierzIdUzytkownika();
@@ -25,7 +25,6 @@ class Adresat
         void ustawEmail (string nowyEmail);
         void ustawAdres(string nowyAdres);
 
-
     private:
         int id;
         int idUzytkownika;
@@ -34,9 +33,6 @@ class Adresat
         string numerTelefonu;
         string email;
         string adres;
-
-
-
 };
 
 #endif // ADRESAT_H

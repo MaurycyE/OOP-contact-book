@@ -19,7 +19,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
 
 }
 
-int KsiazkaAdresowa::logowanieUzytkownika() {
+void KsiazkaAdresowa::logowanieUzytkownika() {
 
     uzytkownikMenager.logowanieUzytkownika();
     if (uzytkownikMenager.czyUzytkownikJestZalogowany()) {

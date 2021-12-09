@@ -25,7 +25,6 @@ class Uzytkownik
         string pobierzLogin();
         string pobierzHaslo();
 
-    //private:
 };
 
 #endif // UZYTKOWNIK_H
