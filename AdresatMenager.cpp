@@ -177,6 +177,8 @@ int AdresatMenager::podajIdWybranegoAdresata() {
 void AdresatMenager::podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata() {
 
     plikZadresatami.podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(usunAdresata());
+//    cout<<plikZadresatami.pobierzIdOstatniegoAdresata()<<endl;
+//        getchar();
 
 }
 

@@ -1,5 +1,7 @@
-1|4|Rachel|Vitharig|777888999|vitharig@gmail.com|zaginiona wyspa|
-3|5|Blue|Nieznane|777888999|kolorek@gmail.com|dietershafen|
+1|4|Rachel|Vitharig|777888999|vitharig@gmail.com|Rezydencja Vitharig|
+3|5|Blue|Cradlepoint|777888999|kolorek@gmail.com|dietershafen|
 4|1|Nathaniel|Vitharig|777888999|vitharig@gmail.com|rezydencja Vitharig|
-5|1|Zoe|Withworth|777888999|withworth@gmail.com|zaginiona wyspa|
-6|5|Alice|Holiester|777888999|holiester@gmail.com|dietershafen|
+5|1|Zoe|Withworth|777888999|withworth@gmail.com|Rezydencja Withworth|
+7|3|Roderick|Springfield|7778888999|springfield@gmail.com|imperium|
+8|5|Alice|Holiester|777888999|holiester@gmail.com|Dietershafen|
+9|5|Virgo|Whitecrow|777888999|whitecrow|Dietershafen|
